@@ -1,0 +1,3 @@
+[submodule "idf-dictionary-creator"]
+	path = idf-dictionary-creator
+	url = https://github.com/gerhardgossen/dictionary-creator
