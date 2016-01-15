@@ -10,8 +10,8 @@ The Collection Specifications are available in a [human readable](topics.md) and
 - **Code**: name of the topic used in the paper
 - **From**: start date of the event
 - **Until**: end date of the event
-- **Before**: ramp-up phase of the event in days
-- **After**: cool-down phase of the event in days
+- **Before**: ramp-up phase of the event in days (half life)
+- **After**: cool-down phase of the event in days (half life)
 - **Description**: short human-readable description of the event
 - **Wikipedia**: one or more relevant pages from the German Wikipedia
 
