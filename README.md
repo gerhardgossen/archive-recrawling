@@ -1,7 +1,6 @@
-# Supplement to Web archive relevance paper #
+# Extracting Event-Centric Document Collections from  Large Scale Web Archives
 
-This repository contains the data and code used in our paper “Towards the Extraction of Event-Centric Datasets
-from Large Scale Temporal Web Collections” (under submission).
+This repository contains the data and code used in our paper “Extracting Event-Centric Document Collections from  Large Scale Web Archives” (TPDL 2017).
 
 ## Collection Specifications ##
 
