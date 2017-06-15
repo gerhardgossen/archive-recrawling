@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Log files</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+<body>
+  <nav data-th-replace="navbar"></nav>
+  <section  class="container">
+  <h1 data-th-inline="text">Index of [[ ${logsDir} ]]</h1>
+  <section>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-right">Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-th-each="file : ${files}">
+          <td><a data-th-href="${file.name}" data-th-text="${file.name}">Name</a></td>
+          <td data-th-text="${T(org.apache.commons.io.FileUtils).byteCountToDisplaySize(file.length())}" class="text-right">10 kB</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  </section>
+</body>
+</html>

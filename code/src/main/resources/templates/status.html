@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Crawl status</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+<body>
+  <nav data-th-replace="navbar"></nav>
+  <section  class="container">
+  <h1 data-th-inline="text">Crawl Status ([[ ${crawlName} ]])</h1>
+  <section>
+    <h2>Counters</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-right">Current</th>
+        </tr>
+      </thead>
+      <tbody>
+        <data-th-block data-th-each="group : ${counters}">
+          <tr>
+            <th data-th-text="${group.key}" colspan="2">Group key</th>
+          </tr>
+          <tr data-th-each="counter: ${group.value}">
+            <td data-th-text="${counter.key}">Key</td>
+            <td data-th-text="${counter.value.count}" class="text-right">Count</td>
+          </tr>
+        </data-th-block>
+      </tbody>
+    </table>
+
+  </section>
+  
+  <section>
+    <h2>Gauges</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-right">Current</th>
+        </tr>
+      </thead>
+      <tbody>
+        <data-th-block data-th-each="group : ${gauges}">
+          <tr>
+            <th data-th-text="${group.key}" colspan="2">Group key</th>
+          </tr>
+          <tr data-th-each="gauge: ${group.value}">
+            <td data-th-text="${gauge.key}">Key</td>
+            <td data-th-replace="::number(${gauge.value.value})">Count</td>
+          </tr>
+        </data-th-block>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Histograms</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-right">Max</th>
+          <th class="text-right">Min</th>
+          <th class="text-right">Median</th>
+          <th class="text-right">Mean</th>
+          <th class="text-right">75%</th>
+          <th class="text-right">99%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <data-th-block data-th-each="group : ${histograms}">
+          <tr>
+            <th data-th-text="${group.key}" colspan="7">Group key</th>
+          </tr>
+          <tr data-th-each="histo: ${group.value}" data-th-with="s=${histo.value.snapshot}">
+            <td data-th-text="${histo.key}">Key</td>
+            <td data-th-replace="::value(${s.max})">Count</td>
+            <td data-th-replace="::value(${s.min})">Count</td>
+            <td data-th-replace="::value(${s.median})">Count</td>
+            <td data-th-replace="::number(${s.mean})">Count</td>
+            <td data-th-replace="::value(${s.get75thPercentile()})">Count</td>
+            <td data-th-replace="::value(${s.get99thPercentile()})">Count</td>
+          </tr>
+        </data-th-block>
+      </tbody>
+    </table>
+  </section>
+  
+  <section>
+    <h2>Meters</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-right">mean rate</th>
+          <th class="text-right">m1</th>
+          <th class="text-right">m5</th>
+          <th class="text-right">m15</th>
+        </tr>
+      </thead>
+      <tbody>
+        <data-th-block data-th-each="group : ${meters}">
+          <tr>
+            <th data-th-text="${group.key}" colspan="5">Group key</th>
+          </tr>
+          <tr data-th-each="meter: ${group.value}">
+            <td data-th-text="${meter.key}">Key</td>
+            <td data-th-replace="::number(${meter.value.meanRate})">Key</td>
+            <td data-th-replace="::number(${meter.value.oneMinuteRate})">Key</td>
+            <td data-th-replace="::number(${meter.value.fiveMinuteRate})">Key</td>
+            <td data-th-replace="::number(${meter.value.fifteenMinuteRate})">Key</td>
+          </tr>
+        </data-th-block>
+      </tbody>
+    </table>
+  </section>
+  
+  <section>
+    <h2>Timer</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-right">max</th>
+          <th class="text-right">min</th>
+          <th class="text-right">mean</th>
+          <th class="text-right">median</th>
+          <th class="text-right">p75</th>
+          <th class="text-right">p95</th>
+          <th class="text-right">p99</th>
+      </tr>
+      </thead>
+      <tbody>
+        <data-th-block data-th-each="group : ${timers}">
+          <tr>
+            <th data-th-text="${group.key}" colspan="8">Group key</th>
+          </tr>
+          <tr data-th-each="timer: ${group.value}" data-th-with="s=${timer.value.snapshot}">
+            <td data-th-text="${timer.key}">Key</td>
+            <td data-th-replace="::number(${s.max} / 1000)">Value</td>
+            <td data-th-replace="::number(${s.min} / 1000)">Value</td>
+            <td data-th-replace="::number(${s.mean} / 1000)">Value</td>
+            <td data-th-replace="::number(${s.median} / 1000)">Value</td>
+            <td data-th-replace="::number(${s.get75thPercentile()} / 1000)">Value</td>
+            <td data-th-replace="::number(${s.get95thPercentile()} / 1000)">Value</td>
+            <td data-th-replace="::number(${s.get99thPercentile()} / 1000)">Value</td>
+          </tr>
+        </data-th-block>
+      </tbody>
+    </table>
+  </section>
+
+  </section>
+
+  <div data-th-remove="all">
+    <td data-th-fragment="number(val)" data-th-text="${val instanceof T(java.lang.Double) || val instanceof T(java.math.BigDecimal)} ? ${#numbers.formatDecimal(val,1,'POINT',2, 'COMMA')} : (${val instanceof T(java.lang.Integer)} ? ${#numbers.formatInteger(val,1,'POINT')} : ${val})" class="text-right">Count</td>
+    <td data-th-fragment="value(val)" data-th-text="${val}" class="text-right">Count</td>
+  </div>
+</body>
+</html>

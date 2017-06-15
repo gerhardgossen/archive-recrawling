@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+  <property name="CONSOLE_LOG_PATTERN" value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t{14}]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wex"/>
+  <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+  <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <withJansi>true</withJansi>
+    <encoder>
+      <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+<!--       <pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) %logger{36} [%thread] - %msg%n</pattern> -->
+    </encoder>
+  </appender>
+
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>errors.log</file>
+    <encoder>
+      <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <timeBasedFileNamingAndTriggeringPolicy
+            class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <maxFileSize>1GB</maxFileSize>
+      </timeBasedFileNamingAndTriggeringPolicy>
+      <fileNamePattern>errors.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+      <maxHistory>7</maxHistory>
+    </rollingPolicy>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>warn</level>
+    </filter>
+  </appender>
+
+  <logger name="de.l3s.icrawl" level="info" />
+  <logger name="org.apache.zookeeper" level="warn" />
+  <logger name="edu.stanford.nlp.process.PTBLexer" level="error" />
+  <logger name="org.apache.nutch.protocol.http.Http" level="warn" />
+  <logger name="org.apache.nutch.plugin.PluginRepository" level="warn" />
+  <logger name="org.hibernate.tool.hbm2ddl" level="info" />
+  <logger name="org.apache.activemq.apollo.log.connection" level="warn" /><!-- too many "disconnect" logs -->
+  <logger name="de.l3s.icrawl.online.DocumentVectorSimilarity" level="info" />
+  <logger name="org.apache.nutch.parse" level="debug" />
+
+  <root level="info">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>

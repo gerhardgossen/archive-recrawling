@@ -1,0 +1,13 @@
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <span class="navbar-brand">archive-crawler</span>
+        <ul class="nav navbar-nav">
+          <li><a href="#metrics" data-th-href="${basePath}">Metrics</a></li>
+          <li><a href="#env" data-th-href="${basePath + 'env'}">Environment</a></li>
+          <li><a href="#logs" data-th-href="${basePath + 'logs/'}">Logs</a></li>
+        </ul>
+        <form action="stop" method="get" class="navbar-form navbar-right">
+          <input type="submit" value="Stop" class="btn btn-danger" />
+        </form>
+      </div>
+  </nav>

@@ -1,0 +1,7 @@
+target/
+evaluation_topics/
+*.log
+/*.zip
+/topics-*
+/date-test
+/urls/
