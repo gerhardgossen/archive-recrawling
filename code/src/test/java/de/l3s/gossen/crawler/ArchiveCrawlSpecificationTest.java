@@ -25,7 +25,7 @@ public class ArchiveCrawlSpecificationTest {
 
     @Test
     public void testReadFile() throws IOException {
-        ArchiveCrawlSpecification spec = ArchiveCrawlSpecification.readFile(new File("wm2006.json"));
+        ArchiveCrawlSpecification spec = ArchiveCrawlSpecification.readFile(new File("src/test/resources/de/l3s/gossen/crawler/wm2006.json"));
         assertThat(spec.getReferenceDocuments(),
             contains("https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2006"));
         assertThat(spec.getSeedUrls(), hasSize(44));

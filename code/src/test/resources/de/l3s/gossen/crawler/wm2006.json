@@ -1,0 +1,66 @@
+{
+	"name": "wm2006",
+	"referenceDocuments": 
+	[
+		"https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2006"
+	],
+
+	"seedUrls": 
+	[
+		"http://www.spiegel.de/sport/fussball/titanic-coup-schinken-und-kuckucksuhren-angeboten-a-84345.html",
+		"http://www.20min.ch/sport/fussball/story/24630718",
+		"http://www.fifa.com/newscentre/news/newsid=73319.html",
+		"http://www.spiegel.de/sport/fussball/wm-2006-bremen-gladbach-und-duesseldorf-schauen-zu-a-191935.html",
+		"http://fifaworldcup.yahoo.com/06/de/d/city/index.html",
+		"http://ftd.de/sport/wm2006/news/panoptikum/84185.html",
+		"http://www.tagesspiegel.de/sport/teamgeist-flattert/722392.html",
+		"http://www.kicker.de/news/fussball/wm/spielplan/weltmeisterschaft/2006/-1/0/spieltag.html",
+		"http://www.sueddeutsche.de/sport/manipulationsverdacht-in-der-bundesliga-ex-profi-bestaetigt-bestechungsversuch-1.687730",
+		"http://www.dfb.de/die-nationalmannschaft/statistik/rekordspieler/?spieledb_path=/teams/479/national_player/3205",
+		"http://www.dradio.de/dlf/sendungen/hintergrundpolitik/511949/",
+		"http://www.heute.de/ZDFheute/inhalt/4/0,3672,3918820,00.html",
+		"http://www.fifa.com/de/fairplay/fairplay/0,1256,0,00.html",
+		"http://www.fifa.com/documents/media/Revision%20Article%2055%20FIFA%20Disciplinary%20Code.pdf",
+		"http://de.fifa.com/aboutfifa/socialresponsibility/news/newsid=104360/index.html",
+		"http://de.fifa.com/aboutfifa/organisation/president/news/newsid=104315/index.html",
+		"http://boerse.ard.de/content.jsp?key=dokument_173056",
+		"http://www.faz.net/aktuell/sport/sportpolitik/wm-2006-preise-bremsen-wm-kartenverkauf-1277870.html",
+		"http://www.faz.net/themenarchiv/2.1084/deutschland-und-die-wm/organisationspanne-kein-eintritt-mit-vip-tickets-1329792.html",
+		"http://fifaworldcup.yahoo.com/06/de/tickets/tac.html",
+		"http://www.tagesspiegel.de/berlin/kein-ticket-kein-problem/726200.html",
+		"http://www.zeit.de/2006/52/9_-Juni",
+		"http://www.diw.de/deutsch/pressemitteilungen/60445.html",
+		"http://www.reporter7.com/de/4157/wirtschaft-profitiert-von-wm-in.htm",
+		"http://www.sueddeutsche.de/wirtschaft/ifo-index-die-wm-euphorie-schwappt-ueber-1.904524",
+		"http://www.stern.de/wirtschaft/news/maerkte/ifo-index-wachstum-wie-lange-nicht-mehr-568433.html",
+		"http://www.focus.de/finanzen/news/ifo-geschaeftsklima_aid_112553.html",
+		"http://sport.ard.de/sp/fussball/news200609/14/wm_ueberschuss.jhtml",
+		"http://www.handelsblatt.com/sport/fussball/nachrichten/interview-mit-dem-fifa-praesidenten-blatter-spricht-von-bester-wm-aller-zeiten/2673774.html",
+		"http://www.zeit.de/online/2006/25/WM-Patriotismus-Kommentar",
+		"http://www.uni-marburg.de/aktuelles/news/2006/20061213studie/20061213studie",
+		"http://www.mopo.de/news/tourismus-deutschland-war-ein-guter-wm-gastgeber,5066732,5722306.html",
+		"http://de.fifa.com/worldcup/news/y=2006/m=7/news=auf-wiedersehen-deutschland-wamkelekele-emzansi-afrika-28316.html",
+		"http://www.edgehill.ac.uk/edgeways/issue17/warofwords.htm",
+		"http://www.tagesspiegel.de/sport/den-fussball-umgebracht/729710.html",
+		"http://www.kicker.de/wmspecial/nationalelf/startseite/artikel/352311",
+		"http://de.fifa.com/worldcup/archive/germany2006/results/matches/match=97410064/report.html",
+		"http://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/Fakultaeten/SozialVerhalten/Institut_fuer_Politikwissenschaft/Prof.Schmid/Documente/Gemischtes/Fussball/sozialwissenschaftliche_aspekte.pdf",
+		"http://dispatch.opac.dnb.de/DB=1.1/CMD?ACT=SRCHA&IKT=8&TRM=1616-3893",
+		"http://de.fifa.com/tournaments/archive/worldcup/germany2006/index.html",
+		"http://wm2006.deutschland.de/",
+		"http://www.bmi.bund.de/SharedDocs/Downloads/DE/Veroeffentlichungen/wm2006_abschlussbericht_der_bundesregierung.html?nn=110430",
+		"http://d-nb.info/gnd/10099500-7",
+		"http://beacon.findbuch.de/seemore/gnd-aks?format=sources&id=10099500-7"
+	],
+
+	"referenceTime": 
+	{
+		"start": "2006-06-09",
+		"end": "2006-07-09",
+		"beforeFuzziness": "P2W",
+		"afterFuzziness": "P2W"
+	},
+	
+	"referenceVectors": {},
+	"defaultLanguage": "de"
+}

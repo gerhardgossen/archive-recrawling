@@ -225,6 +225,10 @@
           <artifactId>log4j</artifactId>
           <groupId>log4j</groupId>
         </exclusion>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
 
@@ -312,31 +316,13 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>pl.project13.maven</groupId>
-        <artifactId>git-commit-id-plugin</artifactId>
-        <version>2.1.11</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>revision</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <verbose>true</verbose>
-          <dateFormat>yyyy-MM-dd'T'HH:mm:ssZ</dateFormat>
-          <generateGitPropertiesFile>true</generateGitPropertiesFile>
-          <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
   <profiles>
     <profile>
       <id>evaluation</id>
       <properties>
-        <mainClass>de.l3s.gossen.crawler.yarn.EvaluationClient</mainClass>
+        <mainClass>de.l3s.gossen.crawler.yarn.Client</mainClass>
       </properties>
     </profile>
   </profiles>
