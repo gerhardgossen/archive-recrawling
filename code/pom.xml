@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.l3s.icrawl</groupId>
   <artifactId>archive-crawler</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.0</version>
 
   <name>iCrawl Archive Crawler</name>
   <description>Application to extract event-related documents from a Web Archive</description>
@@ -29,6 +28,7 @@
     <connection>scm:git:git://github.com/gerhardgossen/archive-recrawling.git</connection>
     <developerConnection>scm:git:git@github.com:gerhardgossen/archive-recrawling.git</developerConnection>
     <url>http://github.com/gerhardgossen/archive-recrawling/tree/master</url>
+    <tag>archive-crawler-0.1.0</tag>
   </scm>
 
   <distributionManagement>
