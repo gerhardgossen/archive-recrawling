@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.l3s.gossen</groupId>
+  <groupId>de.l3s.icrawl</groupId>
   <artifactId>archive-crawler</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
@@ -10,7 +10,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-boot.version>1.5.1.RELEASE</spring-boot.version>
     <lucene.version>4.10.2</lucene.version>
-    <mainClass>de.l3s.gossen.crawler.yarn.Client</mainClass>
+    <mainClass>de.l3s.icrawl.crawler.yarn.Client</mainClass>
     <hadoop.version>2.6.0</hadoop.version>
     <hbase.version>1.0.1.1</hbase.version>
   </properties>
@@ -322,7 +322,7 @@
     <profile>
       <id>evaluation</id>
       <properties>
-        <mainClass>de.l3s.gossen.crawler.yarn.Client</mainClass>
+        <mainClass>de.l3s.icrawl.crawler.yarn.EvaluationClient</mainClass>
       </properties>
     </profile>
   </profiles>

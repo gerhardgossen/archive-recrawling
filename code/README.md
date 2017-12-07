@@ -10,7 +10,7 @@ TODO ...
 ### Grep through CDX files
 
 1. Add search keywords to last column of `topics.tsv`
-2. Run `java de.l3s.gossen.crawler.tools.QueryKeywordsCreator topics.tsv > patterns` to create query patterns.
+2. Run `java de.l3s.icrawl.crawler.tools.QueryKeywordsCreator topics.tsv > patterns` to create query patterns.
   This creates OR-patterns for typical German URLs (drop accents, ASCIIfy umlauts, URL-encode special characters).
   Spaces are replaced by a `.` to match any character.
 3. Copy `patterns` to cluster server.
@@ -33,5 +33,5 @@ TODO ...
     done
     ~~~~
     
-6. Run `java de.l3s.gossen.crawler.tools.MergeExternalUrls **specsDirectory**` to create merged crawl specifications.
+6. Run `java de.l3s.icrawl.crawler.tools.MergeExternalUrls **specsDirectory**` to create merged crawl specifications.
 
