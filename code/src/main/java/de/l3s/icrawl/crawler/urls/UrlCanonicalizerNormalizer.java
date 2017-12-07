@@ -33,7 +33,7 @@ public class UrlCanonicalizerNormalizer implements UrlNormalizer {
 
         @Override
         public URL canonicalize(URL url) throws GalimatiasParseException {
-            return url.withQuery(canonicalizeQuery(url.searchParameters()));
+            return url.withQuery(canonicalizeQuery(new URLSearchParameters(url.query())));
         }
 
         private String canonicalizeQuery(URLSearchParameters searchParameters) {
@@ -89,6 +89,5 @@ public class UrlCanonicalizerNormalizer implements UrlNormalizer {
             return url;
         }
     }
-
 
 }
